@@ -2,4 +2,4 @@
 
 Resolução de exercícios e provas de Estrutura.
 
-Professor: Caludionor Alencar.
+Professor: Claudionor Alencar.
