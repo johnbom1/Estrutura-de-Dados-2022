@@ -108,6 +108,26 @@ void inverteLista(Lista *prim){
         ant = aux;
     }
 }
+
+// QUESTÃO 5)
+// Funçao que conta a quantidade de nós de uma Lista simplesmente encadeada.
+int qtdNOS(Lista *prim){
+    int qtd = 0;
+        Lista *aux;
+        if (prim == NULL)
+            return printf("\nO numero de nos da lista eh: %d\n", qtd);
+        else{
+            aux = prim;
+            qtd += 1;
+            while(aux -> prox){
+                aux = aux->prox;
+                qtd +=1;
+            }
+        }
+        
+        return printf("\nA soma dos elementos eh: %d\n", qtd);
+            
+}
     
 int main(){
     Lista *prim = NULL; //Cirando uma Lista vazia
@@ -115,14 +135,14 @@ int main(){
     prim = insereOdenada(prim, 5);
     prim = insereOdenada(prim, 9);
     prim = insereOdenada(prim, 22);
+    prim = insereOdenada(prim, 1);
     
     imprimeRec(prim);
     
     somaElementos(prim);
     
-    inverteLista(prim);
+    qtdNOS(prim);
     
-    imprimeRec(prim);
     
     return 0;
 }
